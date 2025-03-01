@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramadan Gamified Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calendar-page">
+    <h1>Ramadan Calendar</h1>
+    <div class="calendar-grid">
+      <!-- Days 1 to 30 -->
+      <div class="day-tile" data-day="1">
+        <img src="assets/icons/lock-locked.png" alt="Day 1" class="lock">
+        <img src="assets/tiles/day-tile-1.png" alt="Day 1" class="tile">
+      </div>
+      <!-- Repeat for days 2 to 30 -->
+    </div>
+    <div class="timings-box">
+      <p>Fajr: 5:00 AM</p>
+      <p>Iftar: 6:30 PM</p>
+      <p>Suhoor: 4:00 AM</p>
+    </div>
+  </div>
+
+  <div class="task-page hidden">
+    <h2>Day 1 Tasks</h2>
+    <div class="task-scroller">
+      <div class="task-card">
+        <img src="assets/tasks/task-card-1.png" alt="Prayed Zuhr">
+      </div>
+      <!-- Add more task cards -->
+    </div>
+    <div class="coin-animation">
+      <img src="assets/icons/coin.png" alt="Coin" class="coin">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
