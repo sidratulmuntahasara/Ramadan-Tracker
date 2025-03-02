@@ -31,7 +31,7 @@ function unlockDay(day) {
 
     // After the animation ends, change the lock icon to unlocked
     lock.addEventListener('animationend', () => {
-      lock.src = 'assets/icons/lock-unlocked.png';
+      lock.src = './assets/icons/lock-unlocked.png';
       lock.classList.remove('unlocked'); // Remove the class for future use
     }, { once: true });
 
