@@ -1,7 +1,15 @@
+@font-face {
+  font-family: RamadanFont;
+  src: url("../../assets/RamadhanMubarok-Regular.otf") format("opentype");
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: RamadanFont;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: #340326;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-size: larger;
   }
   
   .memory-grid {
@@ -15,7 +23,7 @@ body {
   .memory-card {
     width: 100px;
     height: 100px;
-    background-color: #333;
+    background-color: #ffcee2;
     border-radius: 10px;
     cursor: pointer;
     position: relative;
@@ -48,6 +56,17 @@ body {
   
   .memory-card.flipped .back {
     transform: rotateY(180deg);
+  }
+
+  .btn{
+    background-color: #ff0066;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 20px;
   }
 
   @media screen and (max-width: 600px) {
