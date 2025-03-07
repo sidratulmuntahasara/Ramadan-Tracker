@@ -79,7 +79,7 @@ function updatePipes() {
 
 // Draw score
 function drawScore() {
-  ctx.fillStyle = '#000';
+  ctx.fillStyle = '#fff';
   ctx.font = '20px Arial';
   ctx.fillText(`Score: ${score}`, 10, 30);
 }
