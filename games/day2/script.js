@@ -49,7 +49,7 @@ function drawPipes() {
 // Update pipes
 function updatePipes() {
   if (frame % 90 === 0) {
-    const gap = 180;
+    const gap = 100;
     const top = Math.random() * (canvas.height - gap);
     pipes.push({ x: canvas.width, width: 40, top: top, bottom: canvas.height - top - gap });
   }
@@ -79,8 +79,8 @@ function updatePipes() {
 
 // Draw score
 function drawScore() {
-  ctx.fillStyle = '#fff';
-  ctx.font = '20px Poppins';
+  ctx.fillStyle = '#000';
+  ctx.font = '20px Arial';
   ctx.fillText(`Score: ${score}`, 10, 30);
 }
 
@@ -120,11 +120,18 @@ function gameLoop() {
   requestAnimationFrame(gameLoop);
 }
 
-// Handle user input
-document.addEventListener('keydown', () => {
+// Handle user input (keyboard and touch)
+function handleInput() {
   if (!gameOver) {
     velocity = lift;
   }
+}
+
+// Add event listeners for keyboard and touch
+document.addEventListener('keydown', handleInput);
+canvas.addEventListener('touchstart', (e) => {
+  e.preventDefault(); // Prevent default touch behavior
+  handleInput();
 });
 
 // Handle Play Again button click
