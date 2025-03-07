@@ -49,6 +49,7 @@ function isDayUnlocked(day) {
 function handleDayClick(day) {
   if (day <= currentDay) {
     unlockDay(day);
+    window.location.href = `games/day${day}/index.html`;
   } else {
     // Vibrate the device for 200ms
     if (navigator.vibrate) {

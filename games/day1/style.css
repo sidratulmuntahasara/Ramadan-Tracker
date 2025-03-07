@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+  
+  .memory-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .memory-card {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .memory-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+  }
+  
+  .memory-card .front {
+    transform: rotateY(180deg);
+  }
+  
+  .memory-card .back {
+    background-color: #555;
+  }
+  
+  .memory-card.flipped .front {
+    transform: rotateY(0deg);
+  }
+  
+  .memory-card.flipped .back {
+    transform: rotateY(180deg);
+  }
+
+  @media screen and (max-width: 600px) {
+    .memory-grid {
+      grid-template-columns: repeat(3, 100px);
+    }
+    
+  }
