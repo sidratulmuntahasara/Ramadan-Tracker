@@ -1,6 +1,8 @@
 const board = document.querySelector('.board');
 const cells = document.querySelectorAll('.cell');
 const resetButton = document.getElementById('resetButton');
+const winnerMessage = document.getElementById('winnerMessage');
+const winnerText = document.getElementById('winnerText');
 
 let currentPlayer = 'X'; // Player is X, computer is O
 let gameState = ['', '', '', '', '', '', '', '', ''];
@@ -25,15 +27,13 @@ function handleCellClick(event) {
 
   // Check if the player wins
   if (checkWin(currentPlayer)) {
-    alert(`${currentPlayer} wins!`);
-    resetGame();
+    showWinnerMessage(`${currentPlayer} wins!`);
     return;
   }
 
   // Check for a draw
   if (gameState.every(cell => cell !== '')) {
-    alert('Draw!');
-    resetGame();
+    showWinnerMessage('Draw!');
     return;
   }
 
@@ -56,15 +56,13 @@ function computerMove() {
 
     // Check if the computer wins
     if (checkWin('O')) {
-      resetGame();
-      alert('O wins!');
+      showWinnerMessage('O wins!');
       return;
     }
 
     // Check for a draw
     if (gameState.every(cell => cell !== '')) {
-      alert('Draw!');
-      resetGame();
+      showWinnerMessage('Draw!');
       return;
     }
 
@@ -82,6 +80,12 @@ function checkWin(player) {
   });
 }
 
+// Function to show the winner message
+function showWinnerMessage(message) {
+  winnerText.textContent = message;
+  winnerMessage.classList.add('show');
+}
+
 // Function to reset the game
 function resetGame() {
   gameState = ['', '', '', '', '', '', '', '', ''];
@@ -90,6 +94,7 @@ function resetGame() {
     cell.classList.remove('X', 'O');
   });
   currentPlayer = 'X'; // Player starts first
+  winnerMessage.classList.remove('show'); // Hide the winner message
 }
 
 // Add event listeners
