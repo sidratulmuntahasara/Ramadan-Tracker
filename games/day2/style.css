@@ -1,0 +1,36 @@
+@font-face {
+  font-family: RamadanFont;
+  src: url("../../assets/RamadhanMubarok-Regular.otf") format("opentype");
+}
+
+body {
+  font-family: RamadanFont;
+  letter-spacing: 1px;
+  font-size: larger;
+  text-align: center;
+  background-color: #340326;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+canvas {
+  border: 1px solid #000;
+  background-color: #70c5ce;
+}
+
+.btn{
+  background-color: #ff0066;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+}
