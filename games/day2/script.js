@@ -49,7 +49,7 @@ function drawPipes() {
 // Update pipes
 function updatePipes() {
   if (frame % 90 === 0) {
-    const gap = 100;
+    const gap = 180;
     const top = Math.random() * (canvas.height - gap);
     pipes.push({ x: canvas.width, width: 40, top: top, bottom: canvas.height - top - gap });
   }
