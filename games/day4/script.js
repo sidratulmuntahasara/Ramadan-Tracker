@@ -202,7 +202,7 @@ playAgainButton.addEventListener('click', resetGame);
 
 // Handle Go Back to Calendar button click
 goBackButton.addEventListener('click', () => {
-  window.location.href = 'calendar.html'; // Replace with your calendar page URL
+  window.location.href = '../../index.html'; // Replace with your calendar page URL
 });
 
 // Start the game
